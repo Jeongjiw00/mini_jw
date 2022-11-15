@@ -30,6 +30,20 @@ def jiwoo_post():
 
     return jsonify({'msg': '방명록 남기기 완료!'})
 
+@app.route("/jiwoo", methods=["DELETE"])
+def jiwoo_delete():
+    name_receive = request.form['name_give']
+    comment_receive = request.form['comment_give']
+
+
+    doc = {
+        'name': name_receive,
+        'comment': comment_receive
+    }
+
+    db.jiwoo.delete_one(doc)
+
+    return jsonify({'msg': '방명록 삭제하기 완료!'})
 
 @app.route("/jiwoo", methods=["GET"])
 def jiwoo_get():

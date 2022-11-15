@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">-->
 
 
     <title>개발구조 정지우 페이지</title>
@@ -49,6 +49,7 @@
                                                     <p>${comment}</p>
                                                     <footer class="blockquote-footer">${name}</footer>
                                                 </blockquote>
+<!--                                                <button onclick="delete_comment()" type="button" class="btn btn-dark">응원 삭제하기</button>-->
                                             </div>
                                         </div>`
                         $('#comment-list').append(temp_html)
@@ -63,6 +64,21 @@
 
             $.ajax({
                 type: 'POST',
+                url: '/jiwoo',
+                data: {name_give: name, comment_give: comment},
+                success: function (response) {
+                    alert(response['msg'])
+                    window.location.reload()
+                }
+            })
+        }
+
+        function delete_comment() {
+            let name = $('#name').val()
+            let comment = $('#comment').val()
+
+            $.ajax({
+                type: 'DELETE',
                 url: '/jiwoo',
                 data: {name_give: name, comment_give: comment},
                 success: function (response) {
@@ -184,6 +200,7 @@
                     <label for="comment">응원댓글</label>
                 </div>
                 <button onclick="save_comment()" type="button" class="btn btn-dark">응원 남기기</button>
+                <button onclick="delete_comment()" type="button" class="btn btn-dark">응원 삭제하기</button>
             </div>
             <div class="mycards" id="comment-list">
             </div>
