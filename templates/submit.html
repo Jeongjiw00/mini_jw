@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
+
+  <title>개발구조 팀 페이지</title>
+  <link rel="icon" href="./icon.png" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <div class="logo">
+        <a href="/">
+          <img class="logo-image" src="./img/titlelogo.png" alt="타이틀로고" />
+        </a>
+      </div>
+      <div class="title">
+        <img class="logo-title" src="./img/headtitle2.png" alt="개발구조" />
+      </div>
+    </div>
+
+    <div class="main-menu">
+      <div class="menu">
+        <div>
+          <a href="javascript:void(0)">
+            <img class="menu-image-left" src="./img/guild_1.png" alt="길드소개" />
+          </a>
+        </div>
+        <div class="menubox"></div>
+        <div>
+          <a href="javascript:void(0)">
+            <img class="menu-image-center" src="./img/guild_2.png" alt="길드원소개" />
+          </a>
+        </div>
+        <div class="menubox"></div>
+        <div>
+          <a href="javascript:void(0)">
+            <img class="menu-image-right" src="./img/guild_3.png" alt="가입신청" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="visual">
+    <form class="row row-cols-lg-auto g-3 align-items-center">
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+        <div class="input-group">
+          <div class="input-group-text">닉네임</div>
+          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="닉네임을 입력해주세요.">
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputProduce">Produce</label>
+        <div class="input-group">
+          <div class="input-group-text">한줄소개</div>
+          <input type="text" class="form-control" id="inlineFormInputProduce" placeholder="한 줄로 입력해주세요.">
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+        <select class="form-select" id="inlineFormSelectPref">
+          <option selected>직업을 선택해주세요.</option>
+          <option value="1">전사</option>
+          <option value="2">마법사</option>
+          <option value="3">궁수</option>
+          <option value="4">도적</option>
+          <option value="5">힐러</option>
+        </select>
+      </div>
+    
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">가입신청</button>
+      </div>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">닉네임</th>
+          <th scope="col">한줄소개</th>
+          <th scope="col">직업</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>잘부탁해요</td>
+          <td>전사</td>
+        </tr>
+        <tr>
+          <td>임꺽정</td>
+          <td>잘부탁해요</td>
+          <td>도적</td>
+        </tr>
+        <tr>
+          <td>세종대왕</td>
+          <td>잘부탁해요</td>
+          <td>힐러</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <footer>
+    <div class="underobject">
+      아래영역
+    </div>
+  </footer>
+</body>
+</html>

@@ -49,7 +49,6 @@
                                                     <p>${comment}</p>
                                                     <footer class="blockquote-footer">${name}</footer>
                                                 </blockquote>
-<!--                                                <button onclick="delete_comment()" type="button" class="btn btn-dark">응원 삭제하기</button>-->
                                             </div>
                                         </div>`
                         $('#comment-list').append(temp_html)
@@ -136,12 +135,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 간단한 TMI
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                             data-bs-parent="#accordionExample">
+                             data-bs-parent="#accordionExample" display>
                             <div class="accordion-body">
                                 <strong>비전공자 개발자</strong> <br>
                                 수학과 경영 전공<br>
